@@ -26,7 +26,7 @@ pipeline {
                 echo "Staged url (RAW) -> http://$ipAddr:$freePortJetty/"
 
                 sed -i "s,.*ProxyPass /tool1/.*,ProxyPass /tool1/ http://localhost:$freePortJetty/," src/main/resources/apache.conf
-                sed -i "s,.*ProxyPass /tool1/.*,ProxyPassReverse /tool1/ http://localhost:$freePortJetty/," src/main/resources/apache.conf
+                sed -i "s,.*ProxyPassReverse /tool1/.*,ProxyPassReverse /tool1/ http://localhost:$freePortJetty/," src/main/resources/apache.conf
 
                 cat src/main/resources/apache.conf'''
       }
