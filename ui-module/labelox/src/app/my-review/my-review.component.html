@@ -1,0 +1,14 @@
+<mat-tab-group class="review-tab" (selectedIndexChange)="getNextBatch($event)">
+    <mat-tab label="Review">
+        <app-review-image *ngIf="isReview"></app-review-image>
+    </mat-tab>
+    <mat-tab label="Approved">
+        <app-approved *ngIf="isApproved"></app-approved>
+    </mat-tab>
+    <mat-tab label="Rejected">
+        <app-rejected *ngIf="isRejected"></app-rejected>
+    </mat-tab>
+    <mat-tab label="Assigned To">
+        <app-assigned-to *ngIf="isAssigned"></app-assigned-to>
+    </mat-tab>
+</mat-tab-group>

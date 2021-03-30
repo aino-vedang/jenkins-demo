@@ -1,0 +1,47 @@
+.app-container {
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 5%;
+}
+
+.createApp {
+    display: grid;
+}
+
+.heading-create {
+    text-align: center;
+    margin: 0%;
+}
+
+.sendEmail {
+    position: relative;
+    width: 100%;
+    top: 2vh;
+}
+
+.filter-email {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selectedEmail {
+    background-color: lightgray;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 2px 10px 2px 5px;
+    margin: 3px;
+    font-weight: 400;
+    font-family: "Oswald";
+}
+
+.close-button {
+    top: 0.5vh;
+    position: relative;
+    font-size: 17px;
+    right: 0px;
+    cursor: pointer;
+}

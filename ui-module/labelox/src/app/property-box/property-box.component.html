@@ -1,0 +1,31 @@
+<div class="property-manager">
+    <mat-card class="card" cdkDrag>
+        <h3 class="title">Select Label</h3>
+        <mat-icon class="close-button" matTooltip="close" (click)="closePropertyManager()">close</mat-icon>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content>
+
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                <mat-radio-button class="example-radio-button" *ngFor="let title of titles" [value]="title" (click)="onSelect($event,title)">
+                    {{title.name}}
+                </mat-radio-button>
+            </mat-radio-group>
+
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-footer class="add">
+            <mat-form-field class="example-full-width" apperance="outline">
+
+                <input matInput placeholder="Enter New Label" #inputLabel>
+
+            </mat-form-field>
+            <button class="material-icons" (click)="addNewLabel(inputLabel.value)">
+              add
+            </button>
+        </mat-card-footer>
+    </mat-card>
+</div>

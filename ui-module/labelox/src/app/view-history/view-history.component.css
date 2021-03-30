@@ -1,0 +1,55 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: lightseagreen;
+    font-size: smaller;
+    line-height: 27px;
+    background: aliceblue;
+    width: 15%
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    line-height: 27px;
+    width: 15%;
+    text-align: center;
+}
+
+.example-viewport1 {
+    height: 83.99vh;
+    width: 99.79vw;
+    border: 1px solid lightseagreen;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: lightseagreen;
+}
+
+.th-heading {
+    position: sticky;
+}

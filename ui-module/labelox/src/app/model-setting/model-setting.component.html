@@ -1,0 +1,45 @@
+<section class="container">
+    <!-- Add label   -->
+    <mat-card>
+        <mat-card-title>Update Label</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <mat-form-field class="searchField" appearance="outline">
+                <mat-label>Add Label</mat-label>
+                <input matInput [(ngModel)]="label">
+                <mat-icon matSuffix (click)="add()">add</mat-icon>
+            </mat-form-field>
+
+            <mat-chip-list class="setting-list">
+                <mat-chip *ngFor="let label of labelList; let i=index">{{label.name}}
+                    <mat-icon (click)="removeLabel(i)">close</mat-icon>
+                </mat-chip>
+
+            </mat-chip-list>
+        </mat-card-content>
+
+    </mat-card>
+
+    <!-- Add or delete user -->
+    <mat-card>
+        <mat-card-title>Add Or Delete User</mat-card-title>
+        <mat-divider></mat-divider>
+
+
+
+        <mat-card-content>
+
+            <mat-form-field class="searchField" appearance="outline">
+                <mat-label>Add User</mat-label>
+                <input matInput>
+                <mat-icon matSuffix>add</mat-icon>
+            </mat-form-field>
+
+            <mat-chip-list class="setting-list">
+                <mat-chip *ngFor="let user of userList; let i=index">{{user.name}}
+                    <mat-icon (click)="removeLabel(i)">close</mat-icon>
+                </mat-chip>
+            </mat-chip-list>
+        </mat-card-content>
+    </mat-card>
+</section>
