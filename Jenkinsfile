@@ -13,8 +13,7 @@ pipeline {
                       npm set //npm.pkg.github.com/:_authToken ${GIT_ACCESS_TOKEN}
                       npm install -g @angular/cli
                       npm install
-                      ng build --prod
-                      ls ../../src/main/resources/
+                      ng build
                       cp -r dist/* ../../src/main/resources/
                       ls ../../src/main/resources/'''
               }
