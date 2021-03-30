@@ -7,6 +7,7 @@ pipeline {
             nodejs('node-js-14') {
               sh '''
                 cd ui-module/labelox
+                ls
                 npm install
                 ng build --prod
                 ls ../../src/main/resources/
