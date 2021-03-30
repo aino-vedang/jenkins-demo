@@ -5,20 +5,21 @@ pipeline {
       stage('Ui resources conf') {
         steps {
             nodejs('node-js-14') {
-              sh '''
-                cd ui-module/labelox
-                ls
-                npm install
-                ng build --prod
-                ls ../../src/main/resources/
-                cp -r dist/* ../../src/main/resources/
-                ls ../../src/main/resources/'''
+              withEnv(['npm_config_cache=npm-cache','HOME=.',]) {
+                  sh '''
+                      cd ui-module/labelox
+                      npm install
+                      ng build --prod
+                      ls ../../src/main/resources/
+                      cp -r dist/* ../../src/main/resources/
+                      ls ../../src/main/resources/'''
+              }
             }
         }
       }
       stage('Apache conf') {
         steps {
-              sh '''#!/bin/bash
+        sh '''#!/bin/bash
                   freePort(){
                       while true
                       do
@@ -47,4 +48,4 @@ pipeline {
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
       }
     }
-  }
+}
