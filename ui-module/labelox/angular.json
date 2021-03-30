@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "./node_modules/@ainosoft/appops-core-components/builders:plugin",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/labelox",
             "index": "src/index.html",
