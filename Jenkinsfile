@@ -9,7 +9,8 @@ pipeline {
                 cd ui-module/labelox
                 npm install
                 ng-build --prod
-                cp -r dist/* ../../src/main/resources/'''
+                cp -r dist/* ../../src/main/resources/
+                ls ../../src/main/resources/'''
             }
         }
       }
