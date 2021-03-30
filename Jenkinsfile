@@ -4,10 +4,11 @@ pipeline {
     stages {
       stage('Ui resources conf') {
         steps {
-            nodejs('node-js-14') {
+            nodejs('node-js') {
               withEnv(['npm_config_cache=npm-cache','HOME=.',]) {
                   sh '''
                       cd ui-module/labelox
+                      rm -rf package-lock.json
                       rm -rf node_modules
                       npm set //npm.pkg.github.com/:_authToken ${GIT_ACCESS_TOKEN}
                       npm install
