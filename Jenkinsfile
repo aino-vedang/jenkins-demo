@@ -8,6 +8,7 @@ pipeline {
               withEnv(['npm_config_cache=npm-cache','HOME=.',]) {
                   sh '''
                       cd ui-module/labelox
+                      rm -rf node_modules
                       npm set //npm.pkg.github.com/:_authToken ${GIT_ACCESS_TOKEN}
                       npm install
                       ng build --prod
