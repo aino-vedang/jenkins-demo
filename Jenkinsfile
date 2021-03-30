@@ -16,6 +16,11 @@ pipeline {
                             fi
                     done
                 }
+                
+                cd ui-module/labelox
+                npm install
+                ng-build --prod
+                cp -r dist/* ../../src/main/resources/
 
                 freePortJetty=$(freePort)
                 ipAddr="$(ip -o route get to 8.8.8.8 | sed -n 's/.*src \\([0-9.]\\+\\).*/\\1/p')"
