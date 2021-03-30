@@ -14,7 +14,7 @@ pipeline {
                       npm install -g @angular/cli
                       npm install
                       ng build
-                      cp -r dist/* ../../src/main/resources/
+                      cp -r dist/labelox/* ../../src/main/resources/
                       ls ../../src/main/resources/'''
               }
             }
