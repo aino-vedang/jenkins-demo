@@ -3,9 +3,6 @@ pipeline {
 
   stages {
     stage('Script test') {
-      when {
-        branch 'main'
-      }
       steps {
             sh '''#!/bin/bash
                 freePort(){
