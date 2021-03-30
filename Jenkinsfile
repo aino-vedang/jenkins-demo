@@ -10,6 +10,7 @@ pipeline {
                       cd ui-module/labelox
                       rm -rf package-lock.json
                       rm -rf node_modules
+                      npm install -g @angular/cli
                       npm set //npm.pkg.github.com/:_authToken ${GIT_ACCESS_TOKEN}
                       npm install
                       ng build --prod
