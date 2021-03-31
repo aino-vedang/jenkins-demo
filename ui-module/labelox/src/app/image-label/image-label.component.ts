@@ -13,6 +13,7 @@ export class ImageLabelComponent implements OnInit {
 
   //Count use for naming element
   count: number = 0;
+  a:any;
 
   //Drawing flag to check draw is on or off
   drawingMode: Boolean = false;

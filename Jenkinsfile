@@ -13,7 +13,7 @@ pipeline {
                       npm set //npm.pkg.github.com/:_authToken ${GIT_ACCESS_TOKEN}
                       npm install -g @angular/cli
                       npm install
-                      ng build
+                      ng build --prod
                       cp -r dist/labelox/* ../../src/main/resources/
                       ls ../../src/main/resources/'''
               }
