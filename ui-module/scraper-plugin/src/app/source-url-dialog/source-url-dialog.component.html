@@ -1,0 +1,16 @@
+<mat-icon matTooltip="close" mat-dialog-close class="close-icon" (click)="closeDialog();">clear</mat-icon>
+
+<form [formGroup]="siteAreaFormGroup" (ngSubmit)="onSubmit();">
+    <mat-form-field appearance="outline" class="site-url-input">
+        <mat-label>Enter site name / URL</mat-label>
+        <input matInput type="text" formControlName="siteUrl" required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline" class="area-input">
+        <mat-label>Enter area name</mat-label>
+        <input matInput type="text" formControlName="areaName" required>
+    </mat-form-field>
+    <button mat-raised-button type="submit" class="save-button" >Save</button>
+</form>
+
+

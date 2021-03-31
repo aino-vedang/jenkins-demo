@@ -1,0 +1,19 @@
+.close-icon {
+    float: right;
+    cursor: pointer;
+}
+
+.site-url-input, .area-input {
+    width: -webkit-fill-available;
+}
+
+::ng-deep .site-url-input, .area-input {
+    font-size: 14px;
+}
+
+.save-button {
+    margin-left: 1%;
+    background: #006400f5;
+    color: white;
+    float: right;
+}

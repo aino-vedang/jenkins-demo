@@ -1,0 +1,96 @@
+.form-container {
+    width: 100%;
+    height: 100vh;
+    margin-top: 20px;
+}
+
+.text-area-container {
+    width: 80%;
+    margin: auto;
+}
+
+.text-area {
+    width: 100%;
+}
+
+.template-selector {
+    float: right;
+    right: 10%;
+}
+
+::ng-deep .template-selector {
+    font-size: 13px;
+}
+
+.format-button {
+    background: #f1f1f1;
+}
+
+.save-script-button, .validate-script-button, .cancel-button {
+    margin-left: 1%;
+    background: #006400f5;
+    color: white;
+    float: right;
+    right: 10%;
+}
+
+.cancel-button {
+    background: #f1f1f1;
+    color: black;
+}
+
+.success-card {
+    float: left;
+    left: 10%;
+    padding: 8px;
+    display: flex;
+    width: 42%;
+    background: #e1f2ea;
+    border: 1px solid #94c6c1;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+.success-icon {
+    color: #006400f5;
+}
+
+.error-icon {
+    color: #d02a2a;
+}
+
+.success-msg, .error-msg {
+    margin: 4px 0px 4px 7px;
+}
+
+.error-card {
+    float: left;
+    left: 10%;
+    padding: 8px;
+    display: flex;
+    width: 42%;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    background: #f6cece;
+    border: 1px solid #e47c7c;
+}
+
+.close-icon {
+    position: absolute;
+    font-size: large;
+    top: 13px;
+    right: 7px;
+    cursor: pointer;
+}

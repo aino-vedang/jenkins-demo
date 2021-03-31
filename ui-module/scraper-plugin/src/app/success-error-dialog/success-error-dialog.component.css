@@ -1,0 +1,8 @@
+.success-error-icon{
+    font-size: xxx-large;
+    margin-right: 25px;
+}
+
+::ng-deep .cdk-overlay-pane {
+    text-align: center;
+}

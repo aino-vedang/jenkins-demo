@@ -7,14 +7,14 @@ pipeline {
             nodejs('node-js') {
               withEnv(['npm_config_cache=npm-cache','HOME=.',]) {
                   sh '''
-                      cd ui-module/labelox
+                      cd ui-module/scraper-plugin
                       rm -rf package-lock.json
                       rm -rf node_modules
                       npm set //npm.pkg.github.com/:_authToken ${GIT_ACCESS_TOKEN}
                       npm install -g @angular/cli
                       npm install
                       ng build --prod
-                      cp -r dist/labelox/* ../../src/main/resources/
+                      cp -r dist/scraper-plugin/* ../../src/main/resources/
                       ls ../../src/main/resources/'''
               }
             }

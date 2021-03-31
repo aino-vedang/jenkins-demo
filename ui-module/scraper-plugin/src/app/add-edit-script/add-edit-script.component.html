@@ -1,0 +1,45 @@
+<div class="form-container">
+
+  <form [formGroup]="formDraft">
+
+    <mat-form-field appearance="outline" class="template-selector">
+      <mat-label>Select Template</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let template of scriptTemplatesList" [value]="template.value">
+          {{template}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="text-area-container">
+      <button mat-raised-button matTooltip="format script" class="format-button" (click)="format();">Format</button>
+      <mat-form-field class="text-area" appearance="outline">
+        <textarea matInput class="script-text-area" type="text" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="20" cdkAutosizeMaxRows="20"
+          formControlName="scriptBlob" required></textarea>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button mat-raised-button class="validate-script-button" (click)="validateScript();">Test Script</button>
+      <button mat-raised-button class="save-script-button" (click)="onSaveScript();" [disabled]="enableSaveButton">Save Script</button>
+      <button mat-raised-button class="cancel-button" (click)="cancelAddOrEditScript();">Cancel</button>
+      <mat-card class="success-card" *ngIf="validMsg;">
+        <div>
+          <mat-icon class="success-icon">check_circle</mat-icon>
+        </div>
+        <span class="success-msg">Valid XML!</span>
+        <mat-icon class="close-icon" matTooltip="close" (click)="closeValidatorMsg();">close</mat-icon>
+      </mat-card>
+
+      <mat-card class="error-card" *ngIf="invalidMsg;">
+        <div>
+          <mat-icon class="error-icon">error</mat-icon>
+        </div>
+        <span class="error-msg">Invalid XML!</span>
+        <mat-icon class="close-icon" matTooltip="close" (click)="closeValidatorMsg();">close</mat-icon>
+      </mat-card>
+    </div>
+
+  </form>
+
+</div>
