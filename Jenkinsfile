@@ -28,7 +28,8 @@ pipeline {
                 sed -i "s,.*ProxyPassReverse /tool1/.*,ProxyPassReverse /tool1/ http://localhost:$freePortJetty/," /tmp/test-apache.conf
             
                 cat /tmp/test-apache.conf
-                #cp -r /tmp/test-apache.conf /etc/test-apache.conf'''
+                cp -r /tmp/test-apache.conf /etc/test-apache.conf
+                cat /etc/test-apache.conf'''
       }
     }
   }
